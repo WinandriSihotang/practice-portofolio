@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/W.jpg"> 
+    <title>My Portofolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #B7E0FF;
+        }
+        .navbar {
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px #008cf7bd;
+        }
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            background-color: whitesmoke;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px #008cf7bd;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 5px solid #B7E0FF;
+            animation: float 3s ease-in-out infinite;
+        }
+        .profile-info {
+            position: relative;
+        }
+        .profile-info h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #008cf7bd;
+            animation: fadeInDown 1.5s;
+        }
+            .navbar-brand {
+            font-weight: bold;
+        }
+        
+        
+        .profile-info p {
+            font-size: 1.2em;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: whitesmoke;
+            background: #008cf7bd;
+            padding: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .social-icons a:hover {
+            background: #000000;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .skill-card {
+        background-color: whitesmoke;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px #008cf7;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px #008cf7;
+    }
+    .skill-logo {
+        background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 6px #008cf7bd;
+    }
+    .skill-logo img {
+        width: 150%;
+        transition: transform 0.3s ease-in-out;
+    }
+    .skill-card:hover .skill-logo {
+        transform: rotate(360deg);
+    }
+    .skill-card:hover .skill-logo img {
+        transform: scale(1.2);
+    }
+    .skill-logo::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            opacity: 1;
+        }
+        70% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+    }
+    .contact-card
+    {
+        max-width: 800px;
+        margin: auto;
+        background-color: whitesmoke;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px #008cf7; 
+    }
+    .contact-card, .project-card {
+            border-radius: 15px;
+        }
+    .gradient-btn {
+            background-color: whitesmoke;
+            color: #008cf7;
+            box-shadow: 0 4px 8px #008cf7;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" style="color: #008cf7bd;" href="#" >
+            <img src="assets/W.jpg" alt="Foto Profil"> 
+            My Portofolio
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #008cf7;" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #008cf7;" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #008cf7;" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- About Me Section -->
+    <div id="about" class="profile-container">
+        <img src="assets/WhatsApp_Image_2024-10-11_at_20.40.36_3a578e86-removebg-preview-removebg-preview.png" alt="Foto Profil" class="profile-img">
+        <div class="profile-info">
+            <h1>Hi, Saya Winandri Sihotang!</h1>
+            <p style="color: #01477c;">Saya mahasiswi semester tujuh di universitas dinamika bangsa kota jambi. Saat ini saya sedang mengikuti program MBKM MSIB yang berfokus pada web development dan UI/UX design. Hobi saya adalah membaca.</p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+<div id="skills" class="skills mt-5">
+    <h2 class="text-center mb-4" style=" color: #008cf7;">Skills</h2>
+    <div class="row">
+        <!-- Skill Card 1 -->
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/hss.jpeg" alt="Skill 1">
+                </div>
+                <h5 class="mt-3" style="color: #008cf7;">CSS</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <!-- Skill Card 2 -->
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/logo 1.jpeg" alt="Skill 2">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Canva</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <!-- Skill Card 3 -->
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/boots.jpeg" alt="Skill 3">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Bootstrap</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/html.jpeg" alt="Skill 1">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">HTML</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/OIP (1).jpeg" alt="Skill 2">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Balsamiq</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/word.jpeg" alt="Skill 2">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Microsoft Word</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/ppint.jpeg" alt="Skill 2">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Microsoft PP</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="skill-card">
+                <div class="skill-logo">
+                    <img src="assets/ex.jpeg" alt="Skill 2">
+                </div>
+                <h5 class="mt-3"  style="color: #008cf7;">Microsoft Excel</h5>
+                <p style="color: #01477c;">Saya mampu namun tidak ahli.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form Section -->
+<section id="contact" class="container text-center my-5">
+    <h2 class="section-title" style="color: #008cf7bd;">Contact Me</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card contact-card">
+                <div class="card-body"  style="color: #01477c;">
+                    <h5>Email</h5>
+                    <p>winandrisihotang@gmail.com</p>
+                    <h5>Phone</h5>
+                    <p>+62 89526307829</p>
+                    <h5>Location</h5>
+                    <p>Jambi, Indonesia</p>
+                </div>
+            </div>
+            <a href="mailto:winandrisihotang@gmail.com" class="btn gradient-btn mt-3">Send a Message</a>
+        </section>
+        </div>
+    </div>
+</section>
+<footer class="text-center">
+    <p style="color: #01477c;">&copy; 2024 Winandri Sihotang</p>
+    <p style="color: #01477c;">Follow me on <a href="https://www.instagram.com/winndriagatha?igsh=MWxrdjB3aGtlanZjYw==" target="_blank">Instagram ❤</a></p>
+</footer>
+</body>
+</html>
